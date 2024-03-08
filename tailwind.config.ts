@@ -1,5 +1,8 @@
 import type { Config } from "tailwindcss";
 
+// Aqui você importa o plugin
+const forms = require('@tailwindcss/forms');
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,11 +13,12 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
-  plugins: [],
+  // Aqui você inclui o plugin dentro do array `plugins`
+  plugins: [forms],
 };
+
 export default config;
