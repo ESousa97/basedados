@@ -8,11 +8,11 @@ export default function SearchBox() {
     event.preventDefault();
     const response = await fetch(`/api/search?query=${encodeURIComponent(query)}`);
     const data = await response.json();
-    console.log(data); // Agora você pode manipular os dados da resposta como necessário
+    console.log(data); // Pronto para manipular os dados da resposta
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex">
+    <form onSubmit={handleSubmit} className="flex justify-end">
       <input
         type="search"
         name="q"
